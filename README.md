@@ -74,3 +74,19 @@ git push
 ```
 
 For more details about Git and GitHub, especially if you have conflicts that can't be merged automatically, see also [this guide](http://flod.org/github/).
+
+# FAQ
+## How can I get only my locale in the repository and not all locales
+Unlike svn, git does not allow cloning a subdirectory only from a repository, so you have to download the whole repository and you get to see the folders for all locales.
+
+The possibility to download a subdirectory only is called "sparse checkout". Relatively recent (>1.7) version of git allow performing a sparse checkout with a few command lines. Here is how to do it:
+```
+ git clone https://github.com/mozilla-l10n/appstores --no-checkout
+ cd appstores
+ git config core.sparsecheckout true
+ echo "fr/*" > .git/info/sparse-checkout
+ git checkout --
+ ```
+If you look at your local clone, it now contains only a 'fr' folder, you don't see all the locales anymore.
+
+The difference with svn is that in git is actually hides the other folders, while in svn you would have downloaded only the folder you wanted.
