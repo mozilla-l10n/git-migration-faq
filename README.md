@@ -7,7 +7,7 @@ git clone https://github.com/mozilla-l10n/appstores
 ```
 SVN equivalent: `svn checkout https://path/to/svn/repo/locale/code`
 
-Unlike SVN, you will *clone the entire repository will all locales*, not simply your locale’s folder. Unfortunately this can't be avoided.
+Unlike SVN, you will **clone the entire repository will all locales**, not simply your locale’s folder. This can be avoided by performing a *sparse checkout* (see [FAQ](#how-can-i-get-only-my-locale-in-the-repository-and-not-all-locales) below).
 
 If you already cloned the repository, always make sure to update your local clone. From within the clone’s folder:
 ```
@@ -77,9 +77,9 @@ For more details about Git and GitHub, especially if you have conflicts that can
 
 # FAQ
 ## How can I get only my locale in the repository and not all locales
-Unlike svn, git does not allow cloning a subdirectory only from a repository, so you have to download the whole repository and you get to see the folders for all locales.
+Unlike SVN, Git does not allow cloning a subdirectory only from a repository, so you have to download the whole repository and you get to see the folders for all locales.
 
-The possibility to download a subdirectory only is called "sparse checkout". Relatively recent (>1.7) version of git allow performing a sparse checkout with a few command lines. Here is how to do it:
+The possibility to download a subdirectory only is called *sparse checkout*. Relatively recent (>1.7) versions of Git allow performing a sparse checkout with a few command lines. Here is how to do it:
 ```
  git clone https://github.com/mozilla-l10n/appstores --no-checkout
  cd appstores
@@ -89,4 +89,4 @@ The possibility to download a subdirectory only is called "sparse checkout". Rel
  ```
 If you look at your local clone, it now contains only a 'fr' folder, you don't see all the locales anymore.
 
-The difference with svn is that in git is actually hides the other folders, while in svn you would have downloaded only the folder you wanted.
+The difference with SVN is that Git actually hides the other folders, while in SVN you would have downloaded only the folder you wanted.
