@@ -90,3 +90,10 @@ The possibility to download a subdirectory only is called *sparse checkout*. Rel
 If you look at your local clone, it now contains only a 'fr' folder, you don't see all the locales anymore.
 
 The difference with SVN is that Git actually hides the other folders, while in SVN you would have downloaded only the folder you wanted.
+
+## I don't want to use the command line. How can I work with GitHub?
+If you're not familiar with command line, one possible alternative is to use the [desktop app](https://desktop.github.com) provided by GitHub. You can also check this [quick tutorial](github_desktop.md) on how to use the app on Windows.
+
+Other valid alternatives providing a graphical user interface for Git:
+* Windows: https://git-for-windows.github.io/
+* Windows+Mac: https://www.sourcetreeapp.com/
