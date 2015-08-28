@@ -1,5 +1,8 @@
 # Workflow examples
 
+## Install Git
+Git packages are available for download on [Git's website](https://git-scm.com/downloads). You can check if Git is installed on your system by running ```git --version``` in a console. See also the [FAQ](#i-dont-want-to-use-the-command-line-how-can-i-work-with-github) section for more details on GUI apps.
+
 ## Clone (or update) your repository
 You need a clone of the repository on your computer.
 ```
@@ -94,6 +97,4 @@ The difference with SVN is that Git actually hides the other folders, while in S
 ## I don't want to use the command line. How can I work with GitHub?
 If you're not familiar with command line, one possible alternative is to use the [desktop app](https://desktop.github.com) provided by GitHub. You can also check this [quick tutorial](github_desktop.md) on how to use the app on Windows.
 
-Other valid alternatives providing a graphical user interface for Git:
-* Windows: https://git-for-windows.github.io/
-* Windows+Mac: https://www.sourcetreeapp.com/
+A page with a list of several GUI applications for Git is [available on Git's website](https://git-scm.com/downloads/guis).
