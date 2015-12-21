@@ -69,12 +69,13 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-To fix this you need to pull the last commits, merge and push
+To fix this you need to pull the last commits, rebase against master and push
 ```
-git pull
-(git will try automatically to merge, confirm the commit message that will appear in your editor)
+git pull --rebase
 git push
 ```
+
+Alternatively you can simply run `git pull`: git will try automatically to merge, you can confirm the commit message that will appear in your editor and then push.
 
 For more details about Git and GitHub, especially if you have conflicts that can't be merged automatically, see also [this guide](http://flod.org/github/).
 
